@@ -1,7 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import profileImg from '../assets/profileimg.jpg'
+import { FaLightbulb, FaPaintBrush, FaCode } from 'react-icons/fa'
 
+const aboutInfo = [
+  { icon: FaLightbulb, title: 'Problem Solver', description: 'I love creating unique solutions to complex problem with cutting-edge technologies.' },
+  { icon: FaPaintBrush, title: 'Creative Design', description: 'Amezing design and user experience are at the heart of everything i create.' },
+  { icon: FaCode, title: 'Clean Code', description: 'I write simple and maintainable code.' },
+]
 const About = () => {
     return (
         <div>
@@ -46,7 +52,7 @@ const About = () => {
                                     {
                                         aboutInfo.map((data,index)=>(
                                             <div key={index} className='bg-dark-300 rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-2 cursor-pointer'>
-                                                <div className='text-purple-500 text-4xl'>
+                                                <div className='text-red-600 text-4xl'>
                                                     <data.icon/>
                                                 </div>
                                                 <h3 className='text-xl font-semibold mb-3'>{data.title}</h3>
